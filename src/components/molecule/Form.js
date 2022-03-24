@@ -26,7 +26,7 @@ const Form = ({ createUser }) => {
 
   return (
     <div className='form box'>
-      <form className='add-form' onSubmit={onSubmit}>
+      <form className='add-form' onSubmit={onSubmit} data-testid='form-test'>
         <div className='required'>
           * Required fields
         </div>

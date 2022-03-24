@@ -8,4 +8,6 @@ export const createUser = async (user) => {
   });
 
   const data = await res.json();
+
+  return data;
 };

@@ -1,11 +1,23 @@
-import { BrowserRouter } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import Navigation from "../molecule/Navigation";
 
-const Header = ({ title, changeDesc }) => {
+const Header = ({ changeDesc }) => {
+  const location = useLocation();
+
+  let taskTitle;
+
+  switch(location.pathname) {
+    case '/': 
+    case '/task1': taskTitle = 'Task #1'; break;
+    case '/task2': taskTitle = 'Task #2'; break;
+    case '/task3': taskTitle = 'Task #3'; break;
+    default: taskTitle = 'Task #4'; 
+  }
+
   return (
-    <header>
-      <h1 className='in-line'>{title}</h1>
-      <Navigation changeDesc={changeDesc} />
+    <header className='header'>
+      <h1 className='inline'>{taskTitle}</h1>
+      <Navigation />
     </header>
   )
 }

@@ -1,11 +1,11 @@
-import { Link } from 'react-router-dom';
+import ButtonLink from "../atoms/ButtonLink";
 
-const Nav = ({ setText }) => {
+const Nav = () => {
   return (
     <div className='navigation'>
-      <Link to='/task1' >Link 1</Link>
-      <Link to='/task2' >Link 2</Link>
-      <Link to='/task3' >Link 3</Link>
+      <ButtonLink to='/task1' text='Task 1'/>
+      <ButtonLink to='/task2' text='Task 2'/>
+      <ButtonLink to='/task3' text='Task 3'/>
     </div>
   )
 }

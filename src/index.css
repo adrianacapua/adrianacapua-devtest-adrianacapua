@@ -11,13 +11,16 @@ body {
   background: #F7F9F9;
 }
 
+.box {
+  border: 2px solid #313638;
+  padding: 30px;
+  border-radius: 5px;
+}
+
 .container {
   margin: 30px 30px;
   overflow: auto;
   min-height: 300px;
-  border: 2px solid #313638;
-  padding: 30px;
-  border-radius: 5px;
 }
 
 .header {
@@ -72,14 +75,21 @@ body {
   margin: 20px 30px;
   padding: 1 rem;
   display: inline-block;
-  box-shadow: 4px 4px 8px 0 rgb(0 0 0 / 20%);
+  box-shadow: 1px 1px 8px 0 rgb(0 0 0 / 20%);
   border-width: 0.25rem;
   border-radius: 0.5rem;
 }
 
 .card-list {
   text-align: center;
+}
+
+.desc {
+  height: 150px;
+  margin: 10px 0;
+}
+
+.content {
   overflow-y: scroll;
-  border: 1px solid black;
   height: 800px;
 }

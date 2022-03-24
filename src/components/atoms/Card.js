@@ -1,8 +1,9 @@
-const Card = ({ id, title, url='https://via.placeholder.com/600/602b9e' }) => {
+const Card = ({ key, title, url }) => {
   return (
     <div className='card'>
       <img
         className='img'
+        title={title} 
         alt={title} 
         src={url}
       />

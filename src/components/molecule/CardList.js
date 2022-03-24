@@ -6,8 +6,9 @@ const CardList = ({ photos }) => {
       {photos.map((photos, i) => {
         return (
           <Card 
-            id='1'
-            title='title'
+            key={photos.id}
+            title={photos.title}
+            url={photos.url}
           />
         )
       })}

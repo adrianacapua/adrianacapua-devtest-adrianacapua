@@ -11,7 +11,7 @@ const Header = ({ changeDesc }) => {
     case '/task1': taskTitle = 'Task #1'; break;
     case '/task2': taskTitle = 'Task #2'; break;
     case '/task3': taskTitle = 'Task #3'; break;
-    default: taskTitle = 'Task #4'; 
+    default: taskTitle = 'Task #1'; 
   }
 
   return (

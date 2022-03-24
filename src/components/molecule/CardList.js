@@ -2,7 +2,7 @@ import Card from "../atoms/Card";
 
 const CardList = ({ photos }) => {
   return (
-    <div className='card-list'>
+    <div className='card-list box'>
       {photos.map((photos, i) => {
         return (
           <Card 

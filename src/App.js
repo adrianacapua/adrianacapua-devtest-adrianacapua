@@ -1,12 +1,15 @@
 import { useState, useEffect } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from "./components/organism/Header";
 import Description from './components/organism/Description';
-import Content from './components/organism/Content';
+import CardList from './components/molecule/CardList';
 
 import { fetchPhotos } from './controller/photos';
 
 function App() {
 
+  const [desc, setDesc] = useState('Find out how https://jsonplaceholder.typicode.com/ REST API works and make a web page to display all photos in album id:1. You need to use React framework with any tools/packages you like to style the page.');
+  
   const [photos, setPhotos] = useState([]);
 
   useEffect(() => {
@@ -20,9 +23,14 @@ function App() {
 
   return (
     <div className='container box'>
-      <Header title='Title Task'/>
-      <Description />
-      <Content photos={photos} />
+      <BrowserRouter>
+        <Header title='Title Task'/>
+        <Description text={desc}/>
+        <Routes>
+          <Route path='/' exact element={<CardList photos={photos} />} />
+          <Route path='/task1' element={<CardList photos={photos} />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

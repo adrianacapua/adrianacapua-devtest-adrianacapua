@@ -82,14 +82,11 @@ body {
 
 .card-list {
   text-align: center;
+  overflow-y: scroll;
+  height: 800px;
 }
 
 .desc {
   height: 150px;
   margin: 10px 0;
-}
-
-.content {
-  overflow-y: scroll;
-  height: 800px;
 }
